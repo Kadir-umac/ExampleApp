@@ -17,7 +17,7 @@ Scrivito.provideComponent("Blog", ({ page, params }) => {
         setTag={navigateToBlogWithTag}
         currentTag={currentTag}
       />
-      <Scrivito.ContentTag className="div" content={page} attribute="body" />
+      <Scrivito.ContentTag className="div bg-dark" content={page} attribute="body" />
       <SchemaDotOrg content={page} />
     </div>
   );

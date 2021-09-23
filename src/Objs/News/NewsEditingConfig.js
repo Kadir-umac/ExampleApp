@@ -1,6 +1,7 @@
 import * as Scrivito from "scrivito";
-import blogObjIcon from "../../assets/images/blog_obj.svg";
+import HeadlineWidget from "../../Widgets/HeadlineWidget/HeadlineWidgetClass";
 import SectionWidget from "../../Widgets/SectionWidget/SectionWidgetClass";
+import ButtonWidget from '../../Widgets/ButtonWidget/ButtonWidgetClass'
 import {
   metadataEditingConfigAttributes,
   metadataInitialContent,
@@ -8,26 +9,25 @@ import {
   metadataValidations,
 } from "../_metadataEditingConfig";
 
-Scrivito.provideEditingConfig("Blog", {
-  title: "Blog",
-  thumbnail: blogObjIcon,
-  hideInSelectionDialogs: true,
+Scrivito.provideEditingConfig("News", {
+  title: "News",
   attributes: {
     ...metadataEditingConfigAttributes,
     title: {
-      title: "Title for Blog Page",
+      title: "Title for new Page",
       description: "Limit to 55 characters.",
     },
-    navigationBackgroundImage: {
-      title: "Header image",
-      description: "The background image of the header.",
-    },
   },
-  properties: ["title", "navigationBackgroundImage"],
+  properties: ["title"],
   propertiesGroups: [...metadataPropertiesGroups],
   initialContent: {
+    body: [
+      new SectionWidget({
+        content: [new HeadlineWidget({ style: "h1" })],
+      }),
+      new HeadlineWidget({ headline: "The question is?" })
+    ],
     ...metadataInitialContent,
-    body: [new SectionWidget({})],
   },
   validations: [...metadataValidations],
 });
