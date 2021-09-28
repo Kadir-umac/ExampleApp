@@ -1,0 +1,23 @@
+@import "src/assets/stylesheets/variables";
+@import "src/assets/stylesheets/bootstrap/mixins/clearfix";
+
+.news {
+    background: #fff;
+    margin: 20px 0;
+    padding: 20px 0;
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin: 0;
+    color: $theme-greymiddle !important;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 30px;
+
+    &--title{
+        height: 50px;
+        width: auto;
+        text-align: center;
+        margin: 10px 0;
+    }
+}

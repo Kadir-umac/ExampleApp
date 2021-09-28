@@ -1,12 +1,12 @@
 import * as Scrivito from 'scrivito';
 import * as React from "react";
-import NewsPreview from '../../Components/News/NewsPreview'
+import NewsPreviewList from '../../Components/News/NewsPreviewList'
 
-Scrivito.provideComponent('NewsOverviewWidget',()=>{
+Scrivito.provideComponent('NewsOverviewWidget',({widget})=>{
 
 
     return(
-        <NewsPreview
-        maxItems={'2'} />
+        <NewsPreviewList
+        maxItems={widget.get("maxItems")} />
     )
 })

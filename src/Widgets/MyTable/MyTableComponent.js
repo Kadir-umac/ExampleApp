@@ -8,7 +8,6 @@ Scrivito.provideComponent("MyTable", ({ widget }) => {
   let rows = [...Array(widget.get('row') || 2).keys()]
 
   let col = [...Array(widget.get('column') || 2).keys()]
-  console.log(rows, col);
   const Row = () => {
     return (
       <>

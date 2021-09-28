@@ -5,6 +5,7 @@ const News = Scrivito.provideObjClass("News", {
   attributes: {
     title: "string",
     body: ["widgetlist", { only: "SectionWidget" }],
+    publishDate: 'date',
     ...metadataAttributes,
   },
   extractTextAttributes: ["body"],

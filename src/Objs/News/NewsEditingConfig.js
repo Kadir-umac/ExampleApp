@@ -21,13 +21,11 @@ Scrivito.provideEditingConfig("News", {
   properties: ["title"],
   propertiesGroups: [...metadataPropertiesGroups],
   initialContent: {
-    body: [
-      new SectionWidget({
-        content: [new HeadlineWidget({ style: "h1" })],
-      }),
-      new HeadlineWidget({ headline: "The question is?" })
-    ],
     ...metadataInitialContent,
+    body: [new SectionWidget({})],
+    publishDate: () => new Date(),
+    title: 'My News'
+  
   },
   validations: [...metadataValidations],
 });

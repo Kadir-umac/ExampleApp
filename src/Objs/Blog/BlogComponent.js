@@ -11,6 +11,7 @@ Scrivito.provideComponent("Blog", ({ page, params }) => {
 
   return (
     <div>
+      Blog
       <TagList
         tags={tags}
         showTags

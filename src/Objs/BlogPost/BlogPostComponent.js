@@ -9,6 +9,7 @@ import SchemaDotOrg from "../../Components/SchemaDotOrg";
 
 Scrivito.provideComponent("BlogPost", ({ page }) => (
   <div>
+    BlogPost
     <BlogPostNavigation currentPost={page} />
     <section className="bg-white">
       <div className="container">

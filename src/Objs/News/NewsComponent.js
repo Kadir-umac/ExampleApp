@@ -2,10 +2,8 @@ import * as React from "react";
 import * as Scrivito from "scrivito";
 import TopicList from "../../Components/TopicList";
 
-import "./News.scss";
-
 Scrivito.provideComponent("News", ({ page }) => (
-  <div className='news-container container'>
+  <div className='container'>
     <h1>News Page</h1>
     <div className="row">
       <div className="col-3 d-none d-lg-block">

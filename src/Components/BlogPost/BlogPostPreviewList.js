@@ -40,7 +40,6 @@ const BlogPostPreviewList = Scrivito.connect(
       const publishedAt = post.get("publishedAt");
       return publishedAt && formatDate(publishedAt, "mmmm yyyy");
     });
-
     return (
       <React.Fragment>
         {Object.entries(months).map(([month, monthPosts]) => (
