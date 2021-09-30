@@ -15,7 +15,7 @@ const NewsPreviewList = Scrivito.connect(({ maxItems }) => {
         const publishedAt = post.get("publishDate");
         return publishedAt && formatDate(publishedAt, "mmmm yyyy");
     });
-    console.log(Object.entries(months));
+
     return (
         <React.Fragment>
             {Object.entries(months).map(([newsItem, news]) => (
@@ -24,32 +24,32 @@ const NewsPreviewList = Scrivito.connect(({ maxItems }) => {
                 </React.Fragment>
             ))
             }
-
         </React.Fragment>
     );
-
 })
-
-
 
 const NewsPreview = Scrivito.connect(({ news }) => (
     <div>
-        {news.map((item, ind) => (
-            <div className="news h3" key={ind}>
-                {item.get('title')}
+        <div className="news">
+            <div className="container">
+                <div className="row d-flex justify-content-around flex-wrap">
+                    {news.map((item, ind) => (
+                        <div  key={ind}>
+                            <div>
+                                {item.get('title')}
+                            </div>
 
-                <div className="news--title h5" key={ind}>
-                    {item.get('publishDate').toLocaleDateString()}
-                </div>
-                <div className="m-2 p-2">
-                    <Scrivito.LinkTag to={item} className='btn'>
-                        Read
-                    </Scrivito.LinkTag>
+                            <div className="m-2 p-2">
+                                <Scrivito.LinkTag to={item} className='btn'>
+                                    Read
+                                </Scrivito.LinkTag>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
-        ))}
+        </div>
     </div>
-
 ))
 
 export default NewsPreviewList;

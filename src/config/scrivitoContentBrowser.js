@@ -116,12 +116,14 @@ const FILTER_PRESENTATIONS = {
   Redirect: { title: "Redirects", icon: "link" },
   SearchResults: { title: "Search results", icon: "lens" },
   Video: { title: "Videos", icon: "video" },
-  News: { title: "News", icon: 'link'}
+  News: { title: "News", icon: 'link'},
+  NewsPage: { title: "NewsPage", icon: 'sheet'}
 };
 
 const PAGES = [
   "Page",
   "News",
+  "NewsPage",
   "LandingPage",
   "BlogPost",
   "Author",
